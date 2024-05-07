@@ -17,7 +17,6 @@ router.post("/", async (req, res) => {
   const contract = network.getContract(chaincodeName);
 
   const firstBlockNumber = await createAsset(contract);
-  await updateAsset(contract);
 
   res.send("Create a new Packing");
 });

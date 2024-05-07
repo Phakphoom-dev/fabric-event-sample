@@ -166,22 +166,20 @@ export async function updateAsset(contract: Contract): Promise<void> {
   console.log(`\n--> Submit transaction: UpdateAsset, ${assetId} update appraised value to 200`);
 
   const payload = {
-    id: "a97cd43f-f0fb-44b0-a65b-194d2aecccc0",
-    orderId: "14713373-0e98-4022-9a65-8a596073cada",
-    farmerId: "23",
-    forecastWeight: 555,
-    actualWeight: 500,
-    isPackerSaved: true,
-    savedTime: "2024-05-02 16:20:08",
-    isApproved: true,
-    approvedDate: "2024-05-02 17:42:57",
-    approvedType: "manual",
-    finalWeight: 123,
-    remark: "ทดสอบโน้ต",
-    packerId: "21",
+    id: "42eb95a8-0627-4628-9b6c-69a89ad2eac5",
+    orderId: "34fe70ad-a732-4fbc-a31f-1494c961ac80",
+    farmerId: "4",
+    packerId: "2",
     gmp: "DOA 50000 99 010546",
-    updatedAt: "2024-05-02T10:42:57Z",
-    createdAt: "2024-05-02T08:23:34Z",
+    forecastWeight: 555,
+    actualWeight: 0,
+    isPackerSaved: false,
+    savedTime: "",
+    isApproved: false,
+    approvedDate: "",
+    approvedType: "",
+    finalWeight: 0,
+    remark: "",
   };
 
   await contract.submitTransaction("UpdateAsset", JSON.stringify(payload));
